@@ -17,6 +17,10 @@ body {
   text-align: center;
 }
 
+.green {
+  color: chartreuse;
+}
+
 /* ZOOM APP */
 #zoom-app {
   display: flex;
@@ -125,7 +129,38 @@ body {
 
 /* CONTROL TOOLBAR */
 #control-toolbar {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   padding: 10px;
   background: #202020;
+  align-items: center;
+}
+
+.button-inline {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+.button-inline li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-inline li:not(:first-child) {
+  margin-left: 15px;
+}
+
+.button-inline li i {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.quit-chat a {
+  text-decoration: none;
+  color: red;
+  font-size: 14px;
 }
