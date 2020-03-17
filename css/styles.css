@@ -8,6 +8,8 @@ body {
   font-family: 'Alegreya Sans', sans-serif;
   color: white;
   font-size: 12px;
+  display: flex;
+  justify-content: center;
 }
 
 /* UTILITIES */
@@ -21,6 +23,7 @@ body {
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  width: 1300px;
   background: black;
 }
 
@@ -28,6 +31,7 @@ body {
 #top-toolbar {
   width: 100%;
   padding: 10px 0 25px;
+  position: relative;
 }
 
 #top-toolbar .partecipants::after {
@@ -42,7 +46,7 @@ body {
 #top-toolbar .view-buttons {
   position: absolute;
   top: 5px;
-  right: 90px;
+  right: 10px;
 }
 
 #top-toolbar .view-buttons a {
@@ -69,15 +73,59 @@ body {
 
 /* VIDEO CHAT */
 #video-chat {
-  background: lightgray;
   flex-grow: 1;
-  width: 1600px;
+  width: 1200px;
   max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
 }
 
+#video-chat .webcam-box {
+  position: relative;
+  flex-basis: 25%;
+  border: 2px solid transparent;
+  transition: border 0.5s;
+  color: white;
+}
 
+#video-chat .webcam-box:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+#video-chat .webcam-box.active {
+  border-color: chartreuse;
+}
+
+#video-chat .webcam-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#video-chat .webcam-box .name,
+#video-chat .webcam-box i {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border-top: 1px solid chartreuse;
+  border-right: 1px solid chartreuse;
+  padding: 2px 4px;
+  opacity: 0;
+}
+
+#video-chat .webcam-box.active .name,
+#video-chat .webcam-box:not(.active) i {
+  opacity: 1;
+}
 
 /* CONTROL TOOLBAR */
 #control-toolbar {
-  background: purple;
+  width: 100%;
+  padding: 10px;
+  background: #202020;
 }
