@@ -6,4 +6,78 @@
 
 body {
   font-family: 'Alegreya Sans', sans-serif;
+  color: white;
+  font-size: 12px;
+}
+
+/* UTILITIES */
+.text-center {
+  text-align: center;
+}
+
+/* ZOOM APP */
+#zoom-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background: black;
+}
+
+/* TOP TOOLBAR */
+#top-toolbar {
+  width: 100%;
+  padding: 10px 0 25px;
+}
+
+#top-toolbar .partecipants::after {
+  content: '';
+  display: inline-block;
+  border: 4px solid transparent;
+  border-top-color: white;
+  margin-left: 5px;
+  transform: translateY(4px);
+}
+
+#top-toolbar .view-buttons {
+  position: absolute;
+  top: 5px;
+  right: 90px;
+}
+
+#top-toolbar .view-buttons a {
+  display: inline-block;
+  padding: 5px 8px;
+  text-decoration: none;
+  background: gray;
+  color: inherit;
+  border-radius: 3px;
+}
+
+#top-toolbar .view-buttons a:hover {
+  color: red;
+}
+
+#top-toolbar .view-buttons .speaker-view i {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+#top-toolbar .view-buttons .full-screen {
+  margin-left: 8px;
+}
+
+/* VIDEO CHAT */
+#video-chat {
+  background: lightgray;
+  flex-grow: 1;
+  width: 1600px;
+  max-width: 100%;
+}
+
+
+
+/* CONTROL TOOLBAR */
+#control-toolbar {
+  background: purple;
 }
